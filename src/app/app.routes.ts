@@ -1,3 +1,14 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { CounterComponent } from './basic/counter/counter.component';
+
+export const routes: Routes = [
+  {
+    path: 'basic/counter',
+    component: CounterComponent,
+  },
+  {
+    path: '**',
+    component: CounterComponent,
+  },
+];
