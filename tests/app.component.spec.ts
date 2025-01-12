@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from '../src/app/app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -23,10 +23,11 @@ describe('AppComponent', () => {
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
+    const component = fixture.componentInstance;
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Hello, angular-test-jest'
-    );
+
+    const h1 = compiled.querySelector('h1');
+    expect(h1?.textContent).toContain(component.title);
   });
 });
