@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharizardComponent should match to snapshot 1`] = `"<h1>Pokémon</h1><!--container--><h2 data-test="h2-loading">Loading...</h2><!--container-->"`;
