@@ -1,0 +1,7 @@
+<h1>Pokémon</h1>
+@if (pokemon$ | async; as charizard) {
+  <h3 data-test="h3-pokemon-name">{{charizard?.name | titlecase }}</h3>
+  <img data-test="h3-pokemon-img" [src]="charizard?.sprites?.front_default" [alt]="charizard?.name">
+} @else {
+  <h2 data-test="h2-loading">Loading...</h2>
+}

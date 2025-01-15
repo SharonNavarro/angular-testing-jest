@@ -30,7 +30,7 @@ describe('CounterComponent', () => {
 
   it('increaseBy should increase based on argument (5)', () => {
     component.increaseBy(5);
-    expect(component.counter).toBe(15);
+    expect(component.counter()).toBe(15);
   });
 
   it('click on buttons should increase or decrease in 1', () => {
@@ -45,10 +45,10 @@ describe('CounterComponent', () => {
     expect(decreaseButton).toBeTruthy();
 
     increaseButton?.click();
-    expect(component.counter).toBe(11);
+    expect(component.counter()).toBe(11);
     decreaseButton.click();
     decreaseButton.click();
-    expect(component.counter).toBe(9);
+    expect(component.counter()).toBe(9);
   });
 
   it('update tag h1 when counter changes', () => {
