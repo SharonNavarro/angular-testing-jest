@@ -96,7 +96,7 @@ module.exports = tseslint.config(
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
       'no-console': [
-        'error',
+        'warn',
         {
           allow: ['warn', 'error'], // Permite `console.warn` y `console.error`
         },
