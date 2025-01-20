@@ -1,0 +1,15 @@
+<h1>Counter {{ counter() }}</h1>
+<h3>Valor desde la ruta</h3>
+<hr />
+<button
+  data-test="increase-button"
+  class="btn btn-primary mx-1"
+  (click)="increaseBy(+1)">
+  +1
+</button>
+<button
+  data-test="decrease-button"
+  class="btn btn-primary mx-1"
+  (click)="increaseBy(-1)">
+  -1
+</button>
