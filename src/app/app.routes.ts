@@ -28,6 +28,11 @@ export const routes: Routes = [
     component: FatherSonComponent,
   },
   {
+    path: '',
+    redirectTo: '/basic/counter',
+    pathMatch: 'full',
+  },
+  {
     path: '**',
     component: CounterComponent,
   },
