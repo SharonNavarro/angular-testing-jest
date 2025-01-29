@@ -7,11 +7,13 @@ import {
   TestBed,
   tick,
 } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { provideRouter } from '@angular/router';
 
 import { AppComponent } from '../app.component';
 import { routes } from '../app.routes';
+import { CounterComponent } from '../basic/counter/counter.component';
 import { PokemonService } from '../shared/services/pokemon.service';
 
 describe('Router: App', () => {
@@ -81,7 +83,9 @@ describe('Router: App', () => {
     expect(location.path()).toBe('/this-route-does-not-exist');
 
     // verify that the `CounterComponent` component was loaded by looking for the component selector
-    const counterWrapper = fixture.nativeElement.querySelector('app-counter');
+    const counterWrapper = fixture.debugElement.query(
+      By.directive(CounterComponent)
+    );
     expect(counterWrapper).toBeTruthy();
   }));
 });
