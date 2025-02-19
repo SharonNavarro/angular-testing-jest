@@ -5,8 +5,12 @@ This project demonstrates a comprehensive approach to testing Angular applicatio
 
 ## Overview
 
-The **Angular Testing Jest** repository showcases best practices for:
-- Unit testing services and components.
+The **Angular Testing Jest** repository showcases for:
+- Unit testing for:
+    - Basic testings
+    - HTTP service
+    - Inputs/Outputs
+    - Basic routing
 - Integrating Jest as the primary testing framework.
 - Ensuring code quality through linting and formatting tools.
 - Enforcing commit message standards using Git hooks.
